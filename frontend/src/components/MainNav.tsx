@@ -1,11 +1,25 @@
-import { Button } from "./ui/button"
+import { useAuth0 } from '@auth0/auth0-react';
+import { Button } from './ui/button';
+import UsernameMenu from './UsernameMenu';
 
 const MainNav = () => {
-	return (
-		<Button variant="ghost" className="font-bold hover:text-yellow-600 hover:bg-white">
-			Log In
-		</Button>
-	)
-}
+  const { loginWithRedirect, isAuthenticated } = useAuth0();
 
-export default MainNav
+  return (
+    <span className="flex space-x-2 items-center">
+      {isAuthenticated ? (
+        <UsernameMenu />
+      ) : (
+        <Button
+          variant="ghost"
+          className="font-bold hover:text-yellow-600 hover:bg-white"
+          onClick={async () => await loginWithRedirect()}
+        >
+          Log In
+        </Button>
+      )}
+    </span>
+  );
+};
+
+export default MainNav;

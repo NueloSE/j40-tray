@@ -20,7 +20,7 @@ const HomePage = () => {
 			<div className="grid md:grid-cols-5 gap-10">
 				<div className='text-center'>
 					<img src={egusi} alt="" />
-					<Link to="/AfricaDishesPage" className='font-bold text-yellow-600 text-2xl'>African dishes</Link>
+					<Link to="/AfricaDishesPage" className='font-bold text-yellow-600 text-2xl '>African dishes</Link>
 				</div>
 				
 				<div className='text-center'>
@@ -33,7 +33,7 @@ const HomePage = () => {
 					<Link to="/AddOnPage" className='font-bold text-yellow-800 text-2xl'>Add On</Link>
 				</div>
 				
-				<div className="text-center">
+				<div className="text-center ">
 					<img src={pie} alt="" />
 					<Link to="/SnackPage" className='font-bold text-yellow-800 text-2xl'>Snacks</Link>
 				</div>

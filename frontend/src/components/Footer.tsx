@@ -13,7 +13,7 @@ const Footer = () => {
 				</span>
 				</Link>
 				<span className="text-black font-bold tracking-tight flex flex-col gap-4 text-center">
-					<span>O8161685012</span>
+					<span className="tracking-widest">O8161685012</span>
 					<div className="flex gap-5 cursor-pointer ">
 						<Link to="#">
 							<img src={fb} alt="" className="hover:bg-white rounded-md" />
